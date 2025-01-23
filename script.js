@@ -1,3 +1,4 @@
+const cards=document.querySelector(".cards");
 
 const teamMembers = [
     {
@@ -37,3 +38,21 @@ const teamMembers = [
       img: "img/female3.png"
     }
   ];
+
+
+ 
+
+  for (const key in teamMembers) {
+     members=teamMembers[key];
+    cards.innerHTML +=`
+    <div class="flex">
+                <figure>
+                    <img height="100px" src="${members.img}" alt="">
+                </figure>
+                <div class="flex flex-column">
+                    <h5>${members.name}</h5>
+                    <span>${members.role}</span>
+                    <span>${members.email}</span>
+                </div>
+    `
+  }
